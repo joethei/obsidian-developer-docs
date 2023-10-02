@@ -595,19 +595,42 @@ export interface Command {
      * @public
      */
     callback?: () => any;
-    /**
-     * Complex callback, overrides the simple callback.
-     * Used to "check" whether your command can be performed in the current circumstances.
-     * For example, if your command requires the active focused pane to be a MarkdownSourceView, then
-     * you should only return true if the condition is satisfied. Returning false or undefined causes
-     * the command to be hidden from the command palette.
-     *
-     * @param checking - Whether the command palette is just "checking" if your command should show right now.
-     * If checking is true, then this function should not perform any action.
-     * If checking is false, then this function should perform the action.
-     * @returns Whether this command can be executed at the moment.
-     * @public
-     */
+	/**
+	 * Complex callback, overrides the simple callback.
+	 * Used to "check" whether your command can be performed in the current circumstances.
+	 * For example, if your command requires the active focused pane to be a MarkdownSourceView, then
+	 * you should only return true if the condition is satisfied. Returning false or undefined causes
+	 * the command to be hidden from the command palette.
+	 *
+	 * @param checking - Whether the command palette is just "checking" if your command should show right now.
+	 * If checking is true, then this function should not perform any action.
+	 * If checking is false, then this function should perform the action.
+	 * @returns Whether this command can be executed at the moment.
+	 *
+	 * @example
+	 * ```javascript
+	 * addCommand({
+	 *   id: 'some-id',
+	 *   name: 'Some command',
+	 *   checkCallback: (checking: boolean) => {
+	 * 	if (checking) {
+	 * 	  // Obsidian is checking to see whether the command should be
+	 * 	  // shown in the command palette.
+	 * 	  //
+	 * 	  // Perform a function which returns true/false depending on
+	 * 	  // whether the command should be shown in the command palette
+	 * 	  return shouldTheCommandBeShown()
+	 * 	} else {
+	 * 	  // Obsidian is not checking whether to show your command -
+	 * 	  // this is the place to execute your code
+	 * 	  runSomeFunctionInYourPlugin()
+	 * 	}
+	 *   }
+	 * })
+	 * ```
+	 *
+	 * @public
+	 */
     checkCallback?: (checking: boolean) => boolean | void;
 
     /**
