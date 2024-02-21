@@ -31,7 +31,7 @@ jobs:
         run: node pre-process.js
 
       - name: Clone API Documenter fork
-        run: git clone https://github.com/ericaxu/rushstack-obsidian.git
+        run: git clone https://github.com/joethei/rushstack.git
 
       - name: Install Rush
         run: npm install -g @microsoft/rush
