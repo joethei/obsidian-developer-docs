@@ -58,22 +58,22 @@ export class Workspace extends Events
 |  [`iterateAllLeaves(callback)`](Workspace/iterateAllLeaves) |  | Iterate through all leaves, including main area leaves, floating leaves, and sidebar leaves. |
 |  [`iterateRootLeaves(callback)`](Workspace/iterateRootLeaves) |  | Iterate through all leaves in the main area of the workspace. |
 |  [`moveLeafToPopout(leaf, data)`](Workspace/moveLeafToPopout) |  | Migrates this leaf to a new popout window. Only works on the desktop app. |
-|  [`on(name: 'quick-preview', callback, ctx)`](Workspace/on) |  |  |
-|  [`on(name: 'files-menu', callback, ctx)`](Workspace/on_9) |  | Triggered when the user opens the context menu with multiple files selected in the File Explorer. |
-|  [`on(name: 'url-menu', callback, ctx)`](Workspace/on_10) |  | Triggered when the user opens the context menu on an external URL. |
-|  [`on(name: 'editor-menu', callback, ctx)`](Workspace/on_11) |  | Triggered when the user opens the context menu on an editor. |
-|  [`on(name: 'editor-change', callback, ctx)`](Workspace/on_12) |  | Triggered when changes to an editor has been applied, either programmatically or from a user event. |
-|  [`on(name: 'editor-paste', callback, ctx)`](Workspace/on_13) |  | Triggered when the editor receives a paste event. Check for <code>evt.defaultPrevented</code> before attempting to handle this event, and return if it has been already handled. Use <code>evt.preventDefault()</code> to indicate that you've handled the event. |
-|  [`on(name: 'editor-drop', callback, ctx)`](Workspace/on_14) |  | Triggered when the editor receives a drop event. Check for <code>evt.defaultPrevented</code> before attempting to handle this event, and return if it has been already handled. Use <code>evt.preventDefault()</code> to indicate that you've handled the event. |
-|  [`on(name: 'quit', callback, ctx)`](Workspace/on_15) |  | Triggered when the app is about to quit. Not guaranteed to actually run. Perform some best effort cleanup here. |
-|  [`on(name: 'resize', callback, ctx)`](Workspace/on_1) |  |  |
-|  [`on(name: 'active-leaf-change', callback, ctx)`](Workspace/on_2) |  |  |
-|  [`on(name: 'file-open', callback, ctx)`](Workspace/on_3) |  |  |
-|  [`on(name: 'layout-change', callback, ctx)`](Workspace/on_4) |  |  |
-|  [`on(name: 'window-open', callback, ctx)`](Workspace/on_5) |  |  |
-|  [`on(name: 'window-close', callback, ctx)`](Workspace/on_6) |  |  |
-|  [`on(name: 'css-change', callback, ctx)`](Workspace/on_7) |  | Triggered when the CSS of the app has changed. |
-|  [`on(name: 'file-menu', callback, ctx)`](Workspace/on_8) |  | Triggered when the user opens the context menu on a file. |
+|  [`on(name: 'quick-preview', callback, ctx)`](on(''quick-previe).on(''quick-preview'').md) |  |  |
+|  [`on(name: 'files-menu', callback, ctx)`](on(''files-men).on(''files-menu'').md) |  | Triggered when the user opens the context menu with multiple files selected in the File Explorer. |
+|  [`on(name: 'url-menu', callback, ctx)`](on(''url-men).on(''url-menu'').md) |  | Triggered when the user opens the context menu on an external URL. |
+|  [`on(name: 'editor-menu', callback, ctx)`](on(''editor-men).on(''editor-menu'').md) |  | Triggered when the user opens the context menu on an editor. |
+|  [`on(name: 'editor-change', callback, ctx)`](on(''editor-chang).on(''editor-change'').md) |  | Triggered when changes to an editor has been applied, either programmatically or from a user event. |
+|  [`on(name: 'editor-paste', callback, ctx)`](on(''editor-past).on(''editor-paste'').md) |  | Triggered when the editor receives a paste event. Check for <code>evt.defaultPrevented</code> before attempting to handle this event, and return if it has been already handled. Use <code>evt.preventDefault()</code> to indicate that you've handled the event. |
+|  [`on(name: 'editor-drop', callback, ctx)`](on(''editor-dro).on(''editor-drop'').md) |  | Triggered when the editor receives a drop event. Check for <code>evt.defaultPrevented</code> before attempting to handle this event, and return if it has been already handled. Use <code>evt.preventDefault()</code> to indicate that you've handled the event. |
+|  [`on(name: 'quit', callback, ctx)`](on(''qui).on(''quit'').md) |  | Triggered when the app is about to quit. Not guaranteed to actually run. Perform some best effort cleanup here. |
+|  [`on(name: 'resize', callback, ctx)`](on(''resiz).on(''resize'').md) |  |  |
+|  [`on(name: 'active-leaf-change', callback, ctx)`](on(''active-leaf-chang).on(''active-leaf-change'').md) |  |  |
+|  [`on(name: 'file-open', callback, ctx)`](on(''file-ope).on(''file-open'').md) |  |  |
+|  [`on(name: 'layout-change', callback, ctx)`](on(''layout-chang).on(''layout-change'').md) |  |  |
+|  [`on(name: 'window-open', callback, ctx)`](on(''window-ope).on(''window-open'').md) |  |  |
+|  [`on(name: 'window-close', callback, ctx)`](on(''window-clos).on(''window-close'').md) |  |  |
+|  [`on(name: 'css-change', callback, ctx)`](on(''css-chang).on(''css-change'').md) |  | Triggered when the CSS of the app has changed. |
+|  [`on(name: 'file-menu', callback, ctx)`](on(''file-men).on(''file-menu'').md) |  | Triggered when the user opens the context menu on a file. |
 |  [`onLayoutReady(callback)`](Workspace/onLayoutReady) |  | Runs the callback function right away if layout is already ready, or push it to a queue to be called later when layout is ready. |
 |  [`openLinkText(linktext, sourcePath, newLeaf, openViewState)`](Workspace/openLinkText) |  |  |
 |  [`openPopoutLeaf(data)`](Workspace/openPopoutLeaf) |  | Open a new popout window with a single new leaf and return that leaf. Only works on the desktop app. |
