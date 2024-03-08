@@ -24,7 +24,7 @@ export abstract class Editor
 |  [`blur()`](Editor/blur) | <code>abstract</code> |  |
 |  [`exec(command)`](Editor/exec) | <code>abstract</code> |  |
 |  [`focus()`](Editor/focus) | <code>abstract</code> |  |
-|  [`getCursor(string)`](Editor/getCursor) | <code>abstract</code> |  |
+|  [`getCursor(string)`](Editor/getCursor('from' | 'to' | 'head' | 'anch).md) | <code>abstract</code> |  |
 |  [`getDoc()`](Editor/getDoc) |  |  |
 |  [`getLine(line)`](Editor/getLine) | <code>abstract</code> | Get the text at line (0-indexed) |
 |  [`getRange(from, to)`](Editor/getRange) | <code>abstract</code> |  |
